@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- 
+			CIS166AA - JavaScript
+			Chapter 8
+			Chapter case project
+			
+			Updated feedback form for forecasting page using array. I did check that user inputted valid email.
+			For chapter 12 I rewrote the feedbackvalidate javascript page using Jquery.
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 12/03/2018
+		-->
+		<title>Digital Thinking</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Economy Thinking</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+				coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+		<aside role="complementary">
+		<p>Our consultants may possibly be looking into doing economic forecasts in the future. Please give us constructive feedback while we look so see
+		if this service will be worthwile.</p>
+		 <ul>
+			<li> The list of economic indicators chosen</li>
+			<p id="message"></p>
+		 </ul>
+		 <!--Company's contact information on profile to show in aside column-->
+		 <p>Company Name: <span id="companyName"></span> </p>
+		 <p>Company email: <span id="companyEmail"></span> </p>
+		 <p>Company number: <span id="companyNumber"></span> </p>
+		 <p>Company fax: <span id="companyFax"></span> </p>
+		</aside>
+		<!--Content for main column on web page -->
+		<main>
+		<div id="errorLabel"></div>
+		<form action="#" novalidate="novalidate">
+         <fieldset id="checkGroup">
+		<input type="checkbox" name="Indicator" value="Inflation">Inflation<br>
+			<input type="checkbox" name="Indicator" value="Interest Rates">Interest Rates<br>
+			<input type="checkbox" name="Indicator" value="Industrial Production">Industrial Production<br>
+			<input type="checkbox" name="Indicator" value="Consumer Confidence">Consumer Confidence<br>
+			<input type="checkbox" name="Indicator" value="Worker Productivity">Worker Productivity<br>
+		 <div class="errorMessage"></div>
+          </fieldset>
+		 <fieldset id="dropdownfield">
+            <div id="surveydropdown">
+			<legend>What kind of company do you have?</legend>
+                <select id="selection" name="dropdrown" required>
+                    <!-- Drop down menu to choose the type of company -->
+                    <option value="Public Limited Company">Public Limited Company</option>
+                    <option value="Private Limited Company">Private Limited Company</option>
+                    <option value="Proprietorship">Proprietorship</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                </select>
+            </div>
+            <div class="errorMessage"></div>
+        </fieldset><br><br>
+		<!-- Form to fill out company contact information to show in aside column. -->
+		 <article id="displayInfoAfter">
+		 <p>Enter company contact information here: </p>
+		 <p id="CompanyInfo">CompanyName: </p>
+		<input type="text" id="getName" />
+		<p id="CompanyInfo">Company Email: </p>
+		<input type="email" id="getEmail" />
+		<p id="emailError" class="errorMsg"></p>
+		<p id="CompanyInfo">Company Phone: </p>
+		<input type="tel" id="getNum" />
+		<p id="CompanyInfo">Company Fax: </p>
+		<input type="tel" id="getFax" />
+		<p></p>
+		<input type="button" onclick="checkInfo();" value="Update Contact" />
+		</article>
+		 <!--Button to submit form for validation -->
+		 <input type="submit" value="Submit form">
+		 </form>
+		 <!--Content for footer on web page -->
+			<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+				<a href="rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+			</footer>
+		</main>
+		</div>
+		<!--Function for displaying values from indicator array onto web page. -->
+		<script src="array.js"> </script>
+		<!--Function for validating user input for feedback form -->
+		<script src= "feedbackValidate.js">
+	</script>
+	<!--Function for validating user profile in aside column -->
+	<script src= "contact.js">
+	</script>
+	</body>
+</html>
+ 

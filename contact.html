@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+		<!-- 
+			CIS166AA - JavaScript
+			Chapter 1 
+			Chapter case project
+			
+			Digital Thinking Webpage
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 10/20/2018
+		-->
+		<title>Digital Thinking</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Thinking</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<aside role="complementary">
+			<!--Image providing hot spot to index page when user clicks on image -->
+			<h3>Click on my friend Mo here and he will take you back to the home page</h3>
+			<map name="moImage" id="moImage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/index.html" shape="rect"
+				coords="0, 0, 260, 360" alt="index page">
+			</map>
+			<img src="moImage.jpg" usemap="#moImage" alt="moImage" width="260"
+			height="360">
+		</aside>
+		<!--Content for main column displaying a contact form for user visiting web page -->
+		<main>
+				<h2>Contact us here at Ramiss Sheij Productions!</h2>
+				<h3>Thank you for visting our website. We here at Ramiss Sheij production look at both sides of the issues that is changing the world we live in. We
+				are looking to in the near future partner our consultants with those who need expertise in these areas to succeed in their busines. In the meantime
+				please provide us help feedback on how we can improve or look at any other issues you might be interested in.</h3>
+				<p>Let us know in the comments if there is a method of contact that you prefer for we would love to get in touch!</p>
+				<p><span id="errorText"></span></p>
+				<form method="post" action="digitalThinking.php">
+				<div>
+				<label for="myName">Name: </label>
+				<input type="text" name="myName" id="myName" required="required"></input>
+				</div>
+				<div>
+				<label for="myEmail">Email: </label>
+				<input type="email" name="myEmail" id="myEmail" required="required"></input>
+				</div>
+				<div>
+				<label for="myPhone">Phone: </label>
+				<input type="tel" name="myPhone" id="myPhone"></input>
+				</div>
+				<div>
+				<label for="comments">Your Message:</label>
+				<textarea name="comments" id="comments" rows="10" cols="40" required="required"></textarea>
+				</div>
+				<!--Content for footer on web page -->
+				<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+					<a href="rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+				</footer>
+		</main>
+		</div>
+	</body>
+</html>
+
+

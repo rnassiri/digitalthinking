@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+		<!-- 
+			CIS166AA - JavaScript
+			Chapter 11 introduce html page using ajax for weather API service 
+			Chapter case project
+			
+			Digital Thinking Webpage
+			Author: Ramiss Nassiri-Sheijani
+		
+		<!--
+		12/01/2018
+		 
+		 -->
+		<!-- Since the focus in this class is to learn javascript and not PHP as instructed I 
+		used a API service that doesn't need a proxy since I don't have any experience coding in PHP -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+		<title>Digital thinking</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+	<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Economy Revolution</h1>
+		</header>
+		<nav role="navigation">
+			<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>
+					<li><a href="index.html"> Home</a></li>
+					<li><a href="artificialintelligence.html"> A.I.</a></li>
+					<li><a href="automation.html"> Automation</a></li>
+					<li><a href="virtualreality.html"> VR</a></li>
+					<li><a href="marketing.html"> Marketing</a></li>
+					<li><a href="security.html"> Security</a></li>
+					<li><a href="forecasting.html"> Forecasting</a></li>
+					<li><a href="date.html"> Date</a></li>
+					<li><a href="feedback.html"> Feedback</a></li>
+					<li><a href="introduction.html"> introduction</a></li>
+					<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+				coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+		<!--Content for right column on web page -->
+		<!--Input information put into form into right column with information from API service. -->
+		<aside role="complementary">
+			<p id="name2">Company name: </p>
+			<p id="state2">Company state: </p>
+			<p id="company2">Your type of company: </p>
+			<br>
+			<label id="labelForTemp">Your cities Temp is: </label><p id="yourTemp"></p>
+			<label id="labelForTemp">Your cities wind mph is: </label><p id="theWind"></p>
+		</aside>
+		<!--Content for main column on web page -->
+		<!--Provides form for user to input information about company. -->
+		<main>
+			<p>We have partnered with a weather service so please give your name and your type of company. Based on your current location
+				we will be happy to give you the weather information for that area!</p>
+			<form id="myInfoForm" name="myInfoForm">
+				<p><span id="errorText"></span></p>
+				<fieldset>
+					<p>First name: </p>
+					<input type="text" id="name" name="name"/>
+					<p>Last name: </p>
+					<input type="text" id="state" name="state"/>
+					<p>Your type of company</p>
+					<select id="company">
+						<option value="Public Limited Company">Public Limited Company</option>
+						<option value="Private Limited Company">Private Limited Company</option>
+						<option value="Proprietorship">Proprietorship</option>
+						<option value="Partnership">Partnership</option>
+						<option value="Limited Liability Partnership">Limited Liability Partnership</option>
+					<select>
+					<br></br>
+					<!--Calls function from javascript to validate information. -->
+					<input type="button" value="Update selection" onclick="runValidate()"/>
+				</fieldset>
+			</form>
+		</main>
+	</body>
+<!--Links to javascript to call and run API for weather service information.-->
+<script src="ajaxService.js"> </script>
+<script src="IntroductionValidate.js"> </script>
+</html>
+
+

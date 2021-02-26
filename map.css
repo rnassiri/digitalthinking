@@ -1,0 +1,23 @@
+/*
+			CIS166AA - JavaScript
+			Chapter 10
+			Chapter case project
+			
+			CSS file for security webpage  to show map of user's location
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 11/24/2018
+		*/
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+/*This is to specify a height and width for the map as specified to so in the book*/
+#map {
+   width: 100%;
+   min-height: 300px;
+}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+			<!-- 
+			CIS166AA - JavaScript
+			Chapter 9
+			Chapter case project
+			
+			Digital Thinking Webpage with enhanced validation using javascript to verify that user only inputs numbers
+			into form for date.
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 11/24/2018
+		-->
+		<title>Digital Economy Revolution</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Economy Revolution</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+				coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+		<!--Content for right column on web page -->
+		<aside role="complementary">
+		<p>We here at digital thinking know the age of your company is an indicator of how successful your company is. We hope you enjoy using this function!</p>
+		</aside>
+		<!--Content for main column on web page -->
+		<main>
+			<!--Java script program using the date method to find out how old user's company is.-->
+			<div>
+				<p>Using this form our team will let you know how long your company has been in business based on the current time!</p>
+				<br>
+				<p>All you have to do is gives us the company's founding date and click the button to find out.Please enter the year in a 4 digit format as in 2018, 
+				1-12 in a 2 digit format for the month so for example use 04 when entering April, and a 2 digit format for the day of the month in the range of 1-31.</p>
+				<form id="dateForm">
+					<label for="companyYear">Enter year company was founded: </label>
+					<input id="companyYear" type="text">
+					<label for="companyMonth">Enter month company was founded: </label>
+					<input id="companyMonth" type="text">
+					<label for="companyDay">Enter day company was founded: </label>
+					<input id="companyDay">
+				</form>
+				<button onclick=dateValidation()>Submit</button>
+				<p>The Result is <br>
+					<span id = "Your company has been in business for this long"></span>
+				</P>
+				<!--Displays the today's current date -->
+				<p id="todayDate">The current date is:</p><br>
+				<!--Displays the date user puts in for company -->
+				<p id="companyDate">Date you entered for when company was founded:</p><br>
+				<!--This subtracts company's date from today's date -->
+				<p id="companyAge"></p>
+			</div>
+			<!--Video for users to learn more about the digital revolution. -->
+		</main>
+		<!--Content for footer on web page -->
+		<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+			<a href="rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+		</footer>
+		</div>
+		<!--function that gives the length of time for user's company -->
+		<script src="dateValidator.js"></script>
+	</body>
+</html>

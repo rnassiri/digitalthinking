@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+		<!-- 
+			CIS166AA - JavaScript
+			Chapter 9
+			Chapter case project
+			
+			Digital Thinking Webpage
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 11/24/2018
+			
+			This web page now has an enhanced version of validation for the javascript form having regular expressions 
+			to check for valid user input.
+		-->
+		<title>Digital Thinking</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Economy Thinking</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+				coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+		<aside role="complementary">
+		<p>Our consultants may possibly be looking into doing economic forecasts in the future. Please give us constructive feedback while we look so see
+		if this service will be worthwile.</p>
+		</aside>
+		<!--Content for main column on web page -->
+		<main>
+		<div id="errorLabel"></div>
+		<form action="#" novalidate="novalidate">
+         <fieldset id="radiogroup">
+		 <div id="forecastingradio">
+		    <!--Form for radio buttons to choose critera for forecasting-->
+            <legend>Please check the factor you would like our business consultants to focus on in the economic forecast.</legend>
+            <input id="inflation" name="forecastingSelect" type="radio" value = "5"/>
+            <label for="inflation">Inflation</label>
+            <input id="interest rates" name="forecastingSelect" type="radio" value = "4"/>
+            <label for="interest rates">Interest Rates</label>
+            <input id="industrial production" name="forecastingSelect" type="radio" value = "3"/>
+            <label for="industrial production">industrial production</label>
+            <input id="consumer confidence" name="forecastingSelect" type="radio" value = "2"/>
+            <label for="love">consumer confidence</label>
+            <input id="worker productivity" name="forecastingSelect" type="radio" value = "1"/>
+            <label for="worker productivity">worker productivity</label>
+		</div>
+		 <div class="errorMessage"></div>
+          </fieldset>
+		 <fieldset id="dropdownfield">
+            <legend>What kind of company do you have?</legend>
+            <div id="surveydropdown">
+                <select id="selection" name="dropdrown" required>
+                    <!-- Drop down menu to choose the type of company -->
+                    <option value="Public Limited Company">Public Limited Company</option>
+                    <option value="Private Limited Company">Private Limited Company</option>
+                    <option value="Proprietorship">Proprietorship</option>
+                    <option value="Partnership">Partnership</option>
+                    <option value="Limited Liability Partnership">Limited Liability Partnership</option>
+                </select>
+            </div>
+            <div class="errorMessage"></div>
+        </fieldset><br><br>
+		<!-- Form to fill out company information. -->
+		 <fieldset id="companyfield">
+            <legend>Please submit the address of your company</legend>
+			<div id="companytext">
+			<p><span id="nameError"></span></p>
+            <label for="billFName">Company Name</label>
+            <input id="billFName" name="BillingFirstName" type="text" required="required" />
+            <label for="billStreet">Street Address</label>
+            <input id="billStreet" name="BillingStreet" type="text" required="required" />
+            <label for="billCity">City</label>
+            <input id="billCity" name="BillingCity" type="text" required="required" />
+            <label for="billState">State</label>
+            <input id="billState" name="BillingState" type="text required="required" />
+            <label for="billZip">Zip</label>
+            <input id="billZip" name="BillingZip" type="text" required="required" />
+            <label for="billPhone">Phone</label>
+            <input id="billPhone" name="BillingPhone" type="text" required="required" />
+			<label for="TrademarkName">Trademark Name</label>
+            <input id="TrademarkName" name="TrademarkName" type="text" required="required" />
+			<label for="comment">Comments:</label><br>
+            <textarea id="comment" placeholder="If there are indicators you would like to include please let us know!"></textarea>
+			<div>
+            <div class="errorMessage"></div>	
+         </fieldset>
+		 <!--Button to submit form for validation -->
+		 <input type="submit" value="Submit">
+		 </form>
+		 <!--Content for footer on web page -->
+			<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+				<a href="rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+			</footer>
+		</main>
+		</div>
+		<!--Function for validating user input for forecasting form -->
+		<script src= "validation.js"></script>
+	</body>
+</html>
+ 

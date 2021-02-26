@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+		<link rel="stylesheet" href="map.css">
+			<!-- 
+			CIS166AA - JavaScript
+			Chapter 10
+			Chapter case project
+			
+			Updated security webpage including location
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 11/24/2018
+		-->
+		<title>Digital Economy Revolution</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+<body>
+	<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Economy Revolution</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+				coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+	<!--Content for right column on web page -->
+		<aside role="complementary">
+		<!-- Web sites to for discussing best practices to secure the web safely -->
+		 <h3>Best web practices!</h3>
+			<p class="news"> McAfee gives some practical tips on searching the web safely that all users whether technical or not can 
+			use to safely search the web, this isn't specific to any browser.
+			<a href="https://securingtomorrow.mcafee.com/consumer/consumer-threat-notices/10-tips-stay-safe-online/">McAfee</a></p>
+			<br>
+			<br>
+			<p class="news"> While this website may be a little technical hackernoon gives safe practices while making users aware of the 
+			dangers of not using a secure and trusted connection.
+			<a href="https://hackernoon.com/how-to-browse-the-internet-safely-d84e59d56057">Hackernoon</a></p>
+			<br>
+			<br>
+			<p class="news"> This website looks at the convenience of location services and informs users how letting others know this sensitive data leads
+			to certain risks that can prove harmful in the wrong hands according to Infoworld.
+			<a href="https://hackernoon.com/how-to-browse-the-internet-safely-d84e59d56057">Hackernoon</a></p>
+			<p> This shows the directions of your current position! </p>
+		<ul>
+            <li>Latitude:</li>
+			<div id="lat"></div>
+			<li>Longitude:</li>
+			<div id="lng"></div>
+			<li>Altitude:</li>
+			<div id="alt"></div>
+         </ul>
+		</aside>
+		<!--Content for main column on web page -->
+		<main>
+		<!--Introduction video giving an introduction to the netscape broswer -->
+		<h3>The internet has changed since the early days of netscape which we here at digital thinking understand the security issues.
+		Here is a video discussing the history of netscape to give you a understanding of the background of netscape</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/_L3Y2_YiT-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<!--Table showing the properties of the user's computer by using a web app -->
+        <div class="table">
+            <ol class="col1">
+				<!-- Navigator object properties -->
+                <li>Web Browser: </li>
+                <li>Version: </li> 
+                <li>Network connected?</li>
+                <li>Operating System:</li>
+                <li>User Agent Info:</li>   
+				<!-- Screen object properties -->
+                <li>Available Screen Height:</li>
+                <li>Available Screen Width:</li>
+                <li>Color Depth:</li>
+                <li>Full Screen Height:</li>
+                <li>Pixel Depth:</li>
+                <li>Full Screen Width:</li>
+
+            </ol>
+            <ol class="col2">
+				<!-- Navigator object properties -->
+                <li id="webbrowser">------</li>
+                <li id="version">------</li>
+                <li id="network">------</li>
+                <li id="operatingsystem">------</li>
+                <li id="useragent">------</li>     
+				<!-- Screen object properties -->				
+                <li id="availableheight">------</li>
+                <li id="availablewidth">------</li>
+                <li id="colordepth">------</li>
+                <li id="height">------</li>
+                <li id="pixeldepth">------</li>
+                <li id="width">------</li>
+            </ol> 
+
+			
+        </div>
+	<p>For a demonstration on how vulnerable your browser is click on the button below</p>
+	<!--Button when clicked shows the properties of the user's computer -->
+	<div id="button">
+        <button id="submit" onclick="submitButton()">Click Me</button>
+    </div>
+	<!-- This is to show the user's position on a map. -->
+	<div id="map" style="position: relative;"></div>
+	</div>
+	<!-- This refers to the google script I need to run my webpage.--->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxx7iu7ycFU1nlsz_T2z9WDtTgBnuLmOE&callback=initMap"
+	type="text/javascript"></script>
+	<!-- Javascript file for showing the location of the user's computer using a google api -->
+	<script src="location.js"></script>
+	<!-- Javascript file for showing the properities of the user's computer using a web app -->
+    <script src="security.js"></script>		
+		</main>
+	<!--Content for footer on web page -->
+		<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+			<a href="rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+		</footer>
+</body>
+</html>

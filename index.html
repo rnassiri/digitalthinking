@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+		<!-- 
+			CIS166AA - JavaScript
+			Chapter 4 
+			Chapter case project
+			
+			Digital Thinking Webpage
+			Updated Index Page
+
+			<!--
+		In this case module I practiced debugging and fixing errors using different methods including window.alert(), 
+		console.log(), HTML validation, analyzing logic, comments, the debugger and breakpoints. I intentionally made some errors to 
+		give me the task of debugging and fixing my code. First thing is I let off a script for my calculator function. Analyzing my 
+		function wasn’t responding I logically checked my html code to see if I put in the function realizing I forgot to include my file 
+		in the JavaScript tag. Then I put in incorrect mathematical operators for my calculator function. I fixed this in two different 
+		ways. I first used breakpoints in my html code where I called the functions and, in my JavaScript, where I did the computation. 
+		I realized after stepping through it was a logical error and I incorrectly used the wrong mathematical operations.
+		
+		Then I incorrectly misspelled my num1 and num2 variables I needed in my calculator function for multiplying. After using the 
+		debugger tool in chrome I  was given the error message that my variables were undefined. I commented out just my divide function 
+		to run my multiplication function to help me in realizing I misspelled my num1 and num2 identifiers. To check if I was still 
+		getting the right logical answers, I used the console.log () method to record the values to realize I wasn’t getting the logical 
+		answers I intended. I checked my mathematical operators to realize I was adding and subtracting instead of dividing.
+		
+		Then I made some intentional errors with my switch statement in my automation page. I also left some closing tags off in my html 
+		code. I checked this with the html validation to realize I forgot to put a closing tag for my head and body elements in my html 
+		page. Duh! Then I when ran my page my programmer occupation wasn’t giving me the correct salary. I used a windolw.alert() to check 
+		the value for the occupation variable before it was getting passed to the switch statement and the value after. I saw I was getting
+		the incorrect answer of asking to choose an occupation. I checked my switch statement to see I forgot to put in a break for one of
+		my cases so I was going to the default case for the programmer.
+		
+			Author: Ramiss Nassiri-Sheijani
+			Date: 11/02/2018
+		-->
+		
+		<!--
+		11/24/2018
+		 This web page now has an enhanced javascript page in the calculator javascript page to include checking for valid user input using regular 
+		 expressions.
+		 
+		 -->
+		<title>Digital thinking</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Economy Revolution</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			<div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+					coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+		<!--Content for right column on web page -->
+		<aside role="complementary">
+			<h3>Digital Revolution</h3>
+			<p class="news">The Digital Revolution refers to the advancement of technology from analog electronic 
+			and mechanical devices to the digital technology available today. For more info, visit 
+			<a href="https://www.techopedia.com/definition/23371/digital-revolution">Techopedia.</a></p>
+			<h3>Industrial Revolution</h3>
+			<p class="news">The industrial Revolution came before the digital revolution. The industrial revolution
+			was the process of changing from an agrarian and handicraft economy to one dominated by industry
+			and machine manufacturing. For more info,vist 
+			<a href="https://www.britannica.com/event/Industrial-Revolution">Britannica.</a></p>
+		</aside>
+		<!--Content for main column on web page -->
+		<main>
+			<h2>My interest in the Digital Revolution</h2>
+			<p>I have always been interested in understanding how the world works to better understand how the world turns.
+			As someone with an engineering background I have always loved tinkering with legos and creating devices that
+			world make the world a better place. With this website I want others with the same interest understand where the
+			world is going.</p>
+			<!--Java script program to do a mathematical function using two numbers to do multiplication or division.-->
+			<div>
+				<p>Let's look at our first interaction of using animation in the digital age to do a mathematical calculation!</p>
+				<form>
+					1st Number : <input type="text" id="firstNumber" /><br>
+					2nd Number: <input type="text" id="secondNumber" /><br>
+					<input type="button" id="multiply" Value="Multiply" />
+					<input type="button" id="divide" Value="Divide" />
+					<input type="button" id="subtract" Value="subtract" />
+					<input type="button" id="add" Value="add" />
+				</form>
+				<p>The Result is : <br>
+					<span id = "result"></span>
+				</p>
+			</div>
+			<!--Video for users to learn more about the digital revolution. -->
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/kpW9JcWxKq0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<p>As the famous British physicist Stephens Hawking said, "Intelligence is the ability to adapt to change.”</p>
+			<!--Content for footer on web page -->
+			<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+				<a href="mailto:rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+			</footer>
+		</main>
+		</div>
+		<!--Function for users that does a calculation by inputting two numbers. -->
+		<script src= "calculator.js">
+	</script>
+	</body>
+</html>

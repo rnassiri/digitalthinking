@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="digital.css">
+			<!-- 
+			CIS166AA - JavaScript
+			Chapter 1 
+			Chapter case project
+			
+			Digital Thinking Webpage
+			Updated Html Page
+
+			Author: Ramiss Nassiri-Sheijani
+			Date: 11/02/2018
+		-->
+		<title>Digital Thinking</title>
+		<script src="modernizr.custom.05819.js"></script>
+	</head>
+	<body>
+		<div id="container">
+		<!--Banner for web page showing digital thinking brand-->
+		<header role = "banner">
+			<h1>Digital Thinking</h1>
+		</header>
+		<nav role="navigation">
+		<!--Links to provide navigation system for user -->
+			<!--Navbar for adding style to navigation bar -->
+			<div id= "navbar">
+				<ul>		
+				<li><a href="index.html"> Home</a></li>
+				<li><a href="artificialintelligence.html"> A.I.</a></li>
+				<li><a href="automation.html"> Automation</a></li>
+				<li><a href="virtualreality.html"> VR</a></li>
+				<li><a href="marketing.html"> Marketing</a></li>
+				<li><a href="security.html"> Security</a></li>
+				<li><a href="forecasting.html"> Forecasting</a></li>
+				<li><a href="date.html"> Date</a></li>
+				<li><a href="feedback.html"> Feedback</a></li>
+				<li><a href="introduction.html"> introduction</a></li>	
+				<li><a href="contact.html"> Contact</a></li>
+				</ul>
+			</div>
+			<!--Image providing hot spot to contact page when user clicks on image -->
+			<map name="digitaleconomyimage" id="digitaleconomyimage">
+				<area href="https://digitalinformationeconomy.000webhostapp.com/contact.html" shape="rect"
+				coords="0, 0, 150, 150" alt="contact page">
+			</map>
+			<img src="digitaleconomyimage.jpg" usemap="#digitaleconomyimage" alt="digitaleconomyimage" width="150"
+			height="150">
+		</nav>
+		<aside role="complementary">
+		</aside>
+		<!--Content for main column on web page -->
+		<main>
+			<h2>How is automation changing the economy</h2>
+			<p>According to the Whitehouse, AI-driven automation will transform the economy over the coming years and decades. The challenge for policymakers will be to update, 
+			strengthen, and adapt policies to respond to the economic effects of AI. However, with every major change in a new economy new jobs are created. Here is table showing
+			salary statistics for the top 5 paying jobs in the future.</p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<!-- Table showing statistics for different occupations -->
+			<table>
+				<tr>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Median Salary</th>
+					<th>Projected Growth</th>
+				</tr>
+				<tr>
+					<td>Software Developer</td>
+					<td>Software developers invent the technologies that we sometimes take for granted every day.</td>
+					<td>$100,080</td>
+					<td>253,400 jobs</td>
+				</tr>
+				<tr>
+					<td>Information Security Analyst</td>
+					<td>Information security analysts are the gatekeepers or security guards of information systems.</td>
+					<td>$92,600</td>
+					<td>28,400 jobs</td>
+				</tr>
+				<tr>
+					<td>IT Manager</td>
+					<td>Computer and information systems managers, or information technology managers, are the guides who help organizations navigate the always-changing labyrinth that is modern technology.</td>
+					<td>$135,800</td>
+					<td>43,800 jobs</td>
+				</tr>
+				<tr>
+					<td>Computer Systems Analyst</td>
+					<td>Computer systems analysts leverage both their knowledge of information technology and business to design better computer systems and processes for their clients.</td>
+					<td>$87,220</td>
+					<td>53,000 jobs</td>
+				</tr>
+				<tr>
+					<td>Computer Network Architect</td>
+					<td>Computer network architects design, build and maintain a variety of data communication networks, from expansive cloud infrastructures to smaller intranets.</td>
+					<td>$101,210</td>
+					<td>10,400 jobs</td>
+				</tr>				
+			</table>
+			<p class="news">These jobs were ranked by US News World report. For more info, visit 
+			<a href="https://money.usnews.com/careers/best-jobs/rankings/best-technology-jobs">US News.</a></p>
+			<!--Dropdown menu to choose salary for occupations available from dropdown list -->
+			<div>
+				<p>If you would like to see the median and the projected growth for the following occupations the following occupation are available. They include
+				Computer Systems Administrator, Database Administrator, Web Developer, Computer Support Specialist, and Computer Programmer.</p>
+				<form method = "get" action"#">
+				<select name="occupations" id="occupation" >
+				<option value="">Choose your occupation</option>
+				<option value = "sysadmin">Computer Systems Administrator</option>
+				<option value = "dbaadmin">Database Administrator</option>
+				<option value = "Webdev" >Web Developer</option>
+				<option value = "CompSpecialist">Computer Support Specialist</option>
+				<option value = "Programmer">Computer Programmer</option>
+				</select>
+				<br />
+				Estimated salary:
+				<input type="text" name="salary" id="salary" value=""/>
+				</form
+			</div>
+			<!--Content for footer on web page -->
+			<footer role="Contentinfo"> Copyright &copy; 2018 Digital Thinking<br>
+				<a href="rnassiri10@gmail.com"> rnassiri10&#64;gmail.com</a>
+			</footer>
+		</main>
+		</div>
+		<!--Function for users that gives the salary for occupation selected by user -->
+		<script src= "chooseOccupation.js">
+	</script>
+	</body>
+</html>
